@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>POO JavaScript</h1>
+    </div>
+    <script>
+        class Mesa{
+            constructor(nroPatas,color,material,tamanio){
+                this.color = color;
+                this.nroPatas = nroPatas;
+                this.material = material;
+                this.tamanio = tamanio;
+            }
+
+            EstarQuieta(){
+                return "estoy quieta";
+            }
+
+            Doblar(nro){
+                return "Se va a doblar "+ nro + " veces";
+            }
+        }
+
+        let mesa1 = new Mesa(4,"rojo","melamine",25.8);
+        mesa1.color = "negro"; 
+        console.log(mesa1);
+        console.log("mesa 1 esta ejecutando la función:" + mesa1.EstarQuieta());
+
+        let mesa2 = new Mesa(4,"azul","madera",40.5);
+        console.log(mesa2);
+        console.log(mesa2.Doblar(2));
+
+
+        
+
+    </script>
+</body>
+</html>

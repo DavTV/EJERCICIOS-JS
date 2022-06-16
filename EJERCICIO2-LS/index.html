@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1 class="py-5">localStorage</h1>
+      <ul id="ul">
+
+      </ul>
+    </div>
+    <!-- localStorage.setItem('numeros',JSON.stringify(dataLS));
+    ArrayN = JSON.parse(localStorage.getItem('numeros')); -->
+    <script>
+        // let numero = [121,12,1212,12,2];
+        // // console.log(numero)
+        
+        // localStorage.setItem("numeros",JSON.stringify(numero));
+
+        // let ArrayN = JSON.parse(localStorage.getItem('numeros'));
+
+        // console.log('--> ', ArrayN);
+        
+
+    //Hacer un programa que solicite 5 números y los guarde en el localstorage
+      // 1.solicitar los 5 números 
+      // 2. blucle
+      // 3.mandar a ls
+      // Ejem1();
+      function Ejem1() {
+          const ul = document.getElementById("ul");
+          ul.className= "list-group";
+          let ArrayNu=[];
+          for (let index = 0; index < 5; index++) {
+                let numero = prompt("INGRESE UN NUMERO");
+                ArrayNu.push(numero);
+          }
+         mandarLS(ArrayNu);
+         let dataLS = obtenerLS();
+         for (let index = 0; index < dataLS.length; index++) {
+              const element = dataLS[index];
+              let li = document.createElement("li");
+              li.className="list-group-item";
+              li.textContent= element;   
+              ul.appendChild(li);
+         } 
+        
+      }
+      
+//Hacer un programa que solicite 5 números y los guarde en el localstorage
+      // 1.solicitar los 5 números 
+      // 2. blucle
+      // 3.mandar a ls
+ejem2()
+function ejem2(){
+  let arraynn=[];
+      for (let index = 0; index < 5; index++) {
+          let dato = prompt("ingrese número");
+          arraynn.push(dato);
+          mandarLS(dato);      
+        }
+}
+      
+     
+
+
+
+
+      function mandarLS(data){
+        let dataLS = obtenerLS();
+        dataLS.push(data);
+        localStorage.setItem("num",JSON.stringify(dataLS));
+      }
+
+      function obtenerLS(){
+        let numeros;
+        if(localStorage.getItem("num")==null){
+          numeros=[];
+          return numeros;
+        }
+          numeros = JSON.parse(localStorage.getItem("num"));
+          return numeros;
+      }
+
+
+
+      //crear un programa que ingrese números y nombres, luego los almacene en un arrelo y los mande al localStorage,
+      // imprimir datos alert
+
+      
+
+    </script>
+  </body>
+</html>

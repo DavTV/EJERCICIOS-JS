@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+  </head>
+  <body>
+      
+    <!-- Escribí un programa que solicite al usuario el ingreso de un texto y almacene ese texto en una variable. A continuación, mostrar en pantalla la primera letra del texto ingresado. Luego, solicitar al usuario que ingrese un número positivo menor a la cantidad de caracteres que tiene el texto que ingresó (por ejemplo, si escribió la palabra “HOLA”, tendrá que ser un número entre 0 y 4) y almacenar este número en una variable llamada indice.
+    Mostrar en pantalla el carácter del texto ubicado en la posición dada por indice. -->
+<!-- 
+    Ejemplo de ejecución:
+
+    Ingresá un texto: En un lugar de La Mancha, de cuyo nombre no quiero acordarme…
+    El carácter en primer lugar es: E
+    Ingresá un número positivo menor a 63
+    7
+    El carácter en esa posición es: u -->
+    <script>
+      // Ejemplo1();
+        function Ejemplo1(){
+            let texto = prompt("Ingrese el texto");
+            console.log(texto[0]);
+            let valor;
+            do {
+              valor = parseInt(prompt("Ingresa un número"))
+            } while (valor > texto.length);
+
+            console.log("El numero ingresado es: "+ valor+ " , el tamaño de la cadena es: "+ texto.length+ " , la primera letra de la cadena es: "+texto)
+        }
+
+        // Escribí un programa que solicite al usuario que ingrese cuántos shows musicales ha visto en el último año y almacene ese número en una variable. A continuación mostrar en pantalla un valor de verdad (True o False) que indique si el usuario ha visto más de 3 shows.
+        // Ejemplo2();
+        function Ejemplo2() {
+          let nroMusicales = parseInt(prompt("INGRESE EL NÚMERO DE SHOWS VISTOS EL ÚLTIMO AÑO"));
+          if(nroMusicales>=3){
+            console.log(true);
+          }else{
+            console.log(false);
+
+          }
+        }
+
+        // Escribí un programa que le solicite al usuario ingresar una fecha formada por 8 números, donde los primeros dos representan el día, los siguientes dos el mes y los últimos cuatro el año (DDMMAAAA). Este dato debe guardarse en una variable con tipo int (número entero). Finalmente, mostrar al usuario la fecha con el formato DD / MM / AAAA
+        // Ejemplo3();
+        function Ejemplo3() {
+          let fecha = prompt("INGRESE FECHA COMPRIMIDA (DDMMAAAA)");
+          let dia = fecha[0]+fecha[1];
+          let mes = fecha[2]+fecha[3];
+          let anio = fecha[4]+fecha[5]+fecha[6]+fecha[7];
+          console.log( "Día: "+dia);
+          console.log( "Mes: "+mes);
+          console.log( "Año: "+anio);
+        }
+
+        // Escribí un programa que le solicite al usuario su edad y la guarde en una variable. Que luego solicite la cantidad de artículos comprados en una tienda y la guarde en otra variable. Finalmente, mostrar en pantalla un valor de verdad (True o False) que indique si el usuario es mayor de 18 años de edad y además compró más de 1 artículo.
+        Ejemplo4()
+        function Ejemplo4() {
+          let edad = parseInt(prompt("INGRESE SU EDAD"));
+          let compras = parseInt(prompt("INGRESE LA CANTIDAD DE PRODUCTOS PRESTADOS"));
+          if (edad >= 18 && compras >= 1) {
+              console.log(true);
+          } else {
+              console.log(false);
+            
+          }
+
+          // Reasignación de correo eventos, configuración phpMailer.
+          
+         
+          
+
+        }
+
+
+
+        function DoWhile(){
+          let count = 0;
+          let numero;
+          do {
+            numero = parseInt(prompt("n"))
+          } while (numero <= 0);
+          
+          console.log(count)
+        }
+        DoWhile();
+    </script>
+  </body>
+</html>

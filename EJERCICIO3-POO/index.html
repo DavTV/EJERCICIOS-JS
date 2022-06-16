@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="Persona.js"></script>
+    <script src="Transporte.js"></script>
+    <script src="TransporteAereo.js"></script>
+    <script src="TransporteMaritimo.js"></script>
+    <script src="TransporteTerrestre.js"></script>
+    <script src="Carro.js"></script>
+  <script>
+      let chofer =new Persona("Juan",24,"Masculino");
+      let carro = new TransporteTerrestre(4,chofer,12,2,"Moche","12:30 - 24:30");
+      console.log(carro)
+
+      let chofer2 =new Persona("Pedro",24,"Masculino");
+      let carro2 = new Carro(4,chofer,12,2,"anchacoHu","11:30 - 13:30","xx-32e");
+      console.log(carro2)
+  </script>  
+</body>
+</html>
