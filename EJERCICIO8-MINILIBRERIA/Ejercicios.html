@@ -1,0 +1,37 @@
+Crear una libreria que permita generar un nuevo selector que deje ingresar el tipo de dato y el texto (nl("","")), duna car, un menú,un footer.
+
+<!-- Crear un juego de memoria básico con cartas -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            border: 1px solid #000;
+            padding: 1rem;
+            margin: 1rem; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Crear una libreria que permita generar un nuevo selector que deje ingresar el tipo de dato y el texto (nl("","")), de una card, un menú,un footer.</h2>
+
+    <div class="pruebas">
+
+    </div>
+    <button id="boton" class="boton">hola</button>
+
+    <script src="libreria.js" ></script>
+    <script>
+        let Sl = new Libreria();
+        Sl.Selector(".","pruebas").appendChild(Sl.Card("Card de prueba","Este es un card de prueba","Ok"))
+        
+        Sl.Selector(".","pruebas").appendChild(Sl.Card("Card de prueba2","Este es un card de prueba2","Ok2"))
+        
+
+    </script>
+</body>
+</html>
